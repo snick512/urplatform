@@ -1,7 +1,3 @@
-<?php 
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,46 +9,11 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://platform.urcpu.com/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="http://platform.urcpu.com/css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
-  <link href="css/style.min.css" rel="stylesheet">
-  <style type="text/css">
-    html,
-    body,
-    header,
-    .view {
-      height: 100%;
-    }
-
-    @media (max-width: 740px) {
-
-      html,
-      body,
-      header,
-      .view {
-        height: 1050px;
-      }
-    }
-
-    @media (min-width: 800px) and (max-width: 850px) {
-
-      html,
-      body,
-      header,
-      .view {
-        height: 700px;
-      }
-    }
-
-    @media (min-width: 800px) and (max-width: 850px) {
-      .navbar:not(.top-nav-collapse) {
-        background: #1C2331 !important;
-      }
-    }
-
-  </style>
+  <link href="http://platform.urcpu.com/css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -60,7 +21,10 @@
   <header>
 
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark mdb-color darken-3">
+    <!--<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">-->
+
       <div class="container">
 
         <!-- Brand -->
@@ -123,68 +87,5 @@
     </nav>
     <!-- Navbar -->
 
-    <!-- Full Page Intro -->
-    <div class="view full-page-intro">
-
-      <!--Video source-->
-      <video class="video-intro" autoplay loop muted>
-        <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />
-      </video>
-
-      <!-- Mask & flexbox options-->
-      <div class="mask rgba-blue-light d-flex justify-content-center align-items-center">
-
-        <!-- Content -->
-        <div class="container">
-
-          <!--Grid row-->
-          <div class="row d-flex h-100 justify-content-center align-items-center wow fadeIn">
-
-            <!--Grid column-->
-            <div class="col-md-6 mb-4 white-text text-center text-md-left">
-
-              <h1 class="display-4 font-weight-bold">Tailored services just for you.</h1>
-
-              <hr class="hr-light">
-
-              <p>
-                <strong>A crypto community doing crypto things.</strong>
-              </p>
-
-              <p class="mb-4 d-none d-md-block">
-                <strong>UR CPU is a team of nerds crafting solutions just for our clients. We love and promote open source because it frees ideas!</strong>
-              </p>
-
-            <!--  <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white">Start
-                free tutorial
-                <i class="fas fa-graduation-cap ml-2"></i>
-              </a>
-              <a target="_blank" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" class="btn btn-outline-white">Download
-                MDB
-                <i class="fas fa-download ml-2"></i>
-              </a> -->
-
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-md-6 col-xl-5 mb-4">
-
-              <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid">
-
-            </div>
-            <!--Grid column-->
-
-          </div>
-          <!--Grid row-->
-
-        </div>
-        <!-- Content -->
-
-      </div>
-      <!-- Mask & flexbox options-->
-
-    </div>
-    <!-- Full Page Intro -->
-
   </header>
+
