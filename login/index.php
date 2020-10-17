@@ -103,6 +103,4 @@ include 'misc/pagehead.php';
 
       <!-- The AJAX login script -->
       <script src="js/login.js"></script>
-</body>
 
-</html>

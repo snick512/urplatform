@@ -120,7 +120,7 @@ echo ", minlength: ". $conf->password_min_length;
   <!-- Initializations -->
   <script type="text/javascript">
     // Animations initialization
-    new WOW().init();
+    new WOW().init(); 
 
   </script>
 
@@ -128,6 +128,3 @@ echo ", minlength: ". $conf->password_min_length;
 <script src="js/signup.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/additional-methods.min.js"></script>
-</body>
-
-</html>

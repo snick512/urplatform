@@ -228,6 +228,3 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
     new WOW().init();
 
   </script>
-</body>
-
-</html>
