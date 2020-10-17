@@ -1,119 +1,190 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapsed" aria-expanded="false">
-        <span class="glyphicon glyphicon-menu-hamburger"></span>
-      </button>
+<?php 
 
-<?php
-//SITE LOGO (IF SET) OR SITE NAME
-if (str_replace(' ', '', $this->mainlogo) == '') {
-    //No logo, just renders site name as link
-    echo '<ul class="nav navbar-nav navbar-left"><li class="sitetitle"><a class="navbar-brand" href="'.$this->base_url.'">'.$this->site_name.'</a></li></ul>';
-} else {
-    //Site main logo as link
-    echo '<ul class="nav navbar-nav navbar-left"><li class="mainlogo"><a class="navbar-brand" href="'.$this->base_url.'"><img src="'.$this->mainlogo.'" height="36px"></a></li></ul>';
-}
 ?>
-<!-- Collect the nav links, forms, and other content for toggling -->
-<div class="collapse navbar-collapse" id="navbar-collapsed">
 
-<!-- BOOTSTRAP NAV LINKS GO HERE. USE <li> items with <a> links inside of <ul> -->
+<!DOCTYPE html>
+<html lang="en">
 
-<?php
-
-if (!is_array($barmenu)) {
-    // If no menu array is specified as override, try to fallback on menu file
-    $menu_file = dirname(__FILE__) . "/barmenu.php";
-    if (file_exists($menu_file)) {
-        include $menu_file;
-    }
-}
-
-if (is_array($barmenu)) {
-    echo '<ul class="nav navbar-nav">';
-
-    foreach ($barmenu as $btn => $url) {
-        if (is_array($url)) {
-            echo "<li class=\"dropdown\">";
-            echo "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">";
-            echo $btn;
-            echo "<span class=\"caret\"></span>";
-            echo "</a>";
-            echo "<ul class=\"dropdown-menu\">";
-
-            foreach ($url as $sub_btn => $sub_url) {
-                echo "<li><a href=\"" . (PHPLogin\MiscFunctions::isAbsUrl($sub_url) ? $sub_url : $this->base_url . '/' . $sub_url) . "\">$sub_btn</a></li>";
-            }
-
-            echo "</ul>";
-        } else {
-            echo "<li><a href=\"" . (PHPLogin\MiscFunctions::isAbsUrl($url) ? $url : $this->base_url . '/' . $url) . "\">$btn</a></li>";
-        }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>UR CPU - Crypto community doing crypto things.</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <style type="text/css">
+    html,
+    body,
+    header,
+    .view {
+      height: 100%;
     }
 
-    echo "</ul>";
-}
+    @media (max-width: 740px) {
 
-?>
+      html,
+      body,
+      header,
+      .view {
+        height: 1050px;
+      }
+    }
 
-<?php
-// SIGN IN / USER SETTINGS BUTTON
-$auth = new PHPLogin\AuthorizationHandler;
+    @media (min-width: 800px) and (max-width: 850px) {
 
-// Pulls either username or first/last name (if filled out)
-if ($auth->isLoggedIn()) {
-    $usr = PHPLogin\ProfileData::pullUserFields($_SESSION['uid'], array('firstname', 'lastname'));
-    if ((is_array($usr)) && (array_key_exists('firstname', $usr) && array_key_exists('lastname', $usr))) {
-        $user = $usr['firstname']. ' ' .$usr['lastname'];
-    } else {
-        $user = $_SESSION['username'];
-    } ?>
+      html,
+      body,
+      header,
+      .view {
+        height: 700px;
+      }
+    }
 
-    <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <?php echo $user; ?>
-                <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="userDropdown">
-                <li><a href="<?php echo $this->base_url; ?>/user/profileedit.php">Edit Profile</a></li>
-                <li><a href="<?php echo $this->base_url; ?>/user/accountedit.php">Account Settings</a></li>
-                <li role="separator" class="divider"></li>
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #1C2331 !important;
+      }
+    }
 
-                <!-- Superadmin Controls -->
-                <?php if ($auth->isSuperAdmin()): ?>
-                  <li><a href="<?php echo $this->base_url; ?>/admin/config.php">Edit Site Config</a></li>
-                  <li><a href="<?php echo $this->base_url; ?>/admin/permissions.php">Manage Permissions</a></li>
-                  <li role="separator" class="divider"></li>
-                <?php endif; ?>
-                <!-- Admin Controls -->
-                <?php if ($auth->isAdmin()): ?>
-                  <li><a href="<?php echo $this->base_url; ?>/admin/users.php">Manage Users</a></li>
-                  <li><a href="<?php echo $this->base_url; ?>/admin/roles.php">Manage Roles</a></li>
-                  <li><a href="<?php echo $this->base_url; ?>/admin/mail.php">Mail Log</a></li>
-                  <li role="separator" class="divider"></li>
-                <?php endif; ?>
+  </style>
+</head>
 
-                <li><a href="<?php echo $this->base_url; ?>/login/logout.php">Logout</a></li>
-            </ul>
-        </li>
-    </ul>
+<body>
 
-<?php
-} else {
-        //User not logged in?>
-    <ul class="nav navbar-nav navbar-right">
-    <li class="dropdown"><a href="<?php echo $this->base_url; ?>/login/index.php" role="button" aria-haspopup="false" aria-expanded="false">Sign In
-    </a>
-    </li>
-    </ul>
+  <header>
 
-<?php
-    };
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+      <div class="container">
 
-?>
+        <!-- Brand -->
+        <a class="navbar-brand" href="https://urcpu.com/" target="_blank">
+          <strong>UR CPU</strong>
+        </a>
 
-</div><!-- /.navbar-collapse -->
-</div>
-</div>
-</nav>
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <!-- Left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://urcpu.com/gate/" target="_blank">Payments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" target="_blank">Demos (soon)</a>
+            </li>
+          </ul>
+
+          <!-- Right -->
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a href="https://www.facebook.com/switchboardoffice" class="nav-link" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://twitter.com/snick512" class="nav-link" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <!--<li class="nav-item">
+              <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link" target="_blank">
+                <i class="fab fa-github mr-2"></i>
+              </a>
+            </li>-->
+         <!--   <li class="nav-item">
+              <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light rounded"
+                target="_blank">
+                <i class="fas fa-user mr-2"></i>Sing Up
+              </a>
+            </li>-->
+          </ul>
+
+        </div>
+
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Full Page Intro -->
+    <div class="view full-page-intro">
+
+      <!--Video source-->
+      <video class="video-intro" autoplay loop muted>
+        <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Mask & flexbox options-->
+      <div class="mask rgba-blue-light d-flex justify-content-center align-items-center">
+
+        <!-- Content -->
+        <div class="container">
+
+          <!--Grid row-->
+          <div class="row d-flex h-100 justify-content-center align-items-center wow fadeIn">
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4 white-text text-center text-md-left">
+
+              <h1 class="display-4 font-weight-bold">Tailored services just for you.</h1>
+
+              <hr class="hr-light">
+
+              <p>
+                <strong>A crypto community doing crypto things.</strong>
+              </p>
+
+              <p class="mb-4 d-none d-md-block">
+                <strong>UR CPU is a team of nerds crafting solutions just for our clients. We love and promote open source because it frees ideas!</strong>
+              </p>
+
+            <!--  <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white">Start
+                free tutorial
+                <i class="fas fa-graduation-cap ml-2"></i>
+              </a>
+              <a target="_blank" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" class="btn btn-outline-white">Download
+                MDB
+                <i class="fas fa-download ml-2"></i>
+              </a> -->
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6 col-xl-5 mb-4">
+
+              <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid">
+
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+        </div>
+        <!-- Content -->
+
+      </div>
+      <!-- Mask & flexbox options-->
+
+    </div>
+    <!-- Full Page Intro -->
+
+  </header>
