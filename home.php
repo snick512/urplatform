@@ -1,14 +1,14 @@
   <!--Main layout-->
-  <main>
+  <main class="mt-5 pt-4">
     <div class="container">
-
-
-      <hr class="my-5">
 
       <!--Section: Main features & Quick Start-->
       <section>
-
-        <h3 class="h3 text-center mb-5">Free the spirits</h3>
+      <?php if ($auth->isLoggedIn()) {
+        echo "<h3 class=\"h3 text-center mb-5\">Free the spirits, $uruser</h3>";
+      } else {
+        echo "<h3 class=\"h3 text-center mb-5\">Free the spirits</h3>";
+      } ?>
 
         <!--Grid row-->
         <div class="row wow fadeIn">

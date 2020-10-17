@@ -18,10 +18,13 @@ if ($auth->isLoggedIn()) {
 // $_SESSION['username']
 // logged in
 //echo "We're logged in as ".$_SESSION['username']."";
+$uruser = $_SESSION['username'];
 include "home.php";
+
 } else {
 // not logged in
-include "home.php";
+//include "home.php";
+ echo "not logged in";
 }
 
 ?>
