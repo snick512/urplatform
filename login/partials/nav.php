@@ -1,23 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>UR CPU - Crypto community doing crypto things.</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="http://platform.urcpu.com/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="http://platform.urcpu.com/css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
-  <link href="http://platform.urcpu.com/css/style.min.css" rel="stylesheet">
-</head>
-
-<body>
-
   <header>
 
     <!-- Navbar -->
@@ -68,17 +48,17 @@
                 <i class="fab fa-twitter"></i>
               </a>
             </li>
-            <!--<li class="nav-item">
-              <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link" target="_blank">
+            <li class="nav-item">
+              <a href="https://github.com/snick512" class="nav-link" target="_blank">
                 <i class="fab fa-github mr-2"></i>
               </a>
-            </li>-->
-         <!--   <li class="nav-item">
-              <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light rounded"
+            </li>
+            <li class="nav-item">
+              <a href="login/" class="nav-link border border-light rounded"
                 target="_blank">
-                <i class="fas fa-user mr-2"></i>Sing Up
+                <i class="fas fa-user mr-2"></i>Account
               </a>
-            </li>-->
+            </li>
           </ul>
 
         </div>
