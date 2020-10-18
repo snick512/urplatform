@@ -14,28 +14,34 @@
 // form testing 
 
 
-$ursubmit = $_GET["submit"];
+//$ursubmit = $_GET["submit"];
 
-$requestsubject = $_GET["requestsubject"];
-$requestbody = $_GET["requestbody"];
+$requestsubject = $_POST["requestsubject"];
+$requestbody = $_POST["requestbody"];
 
-        if(!$ursubmit) { 
-
-          
+//DB::$error_handler = "false";
+//DB::$throw_exception_on_error = "true";
+/*
+try {   
 DB::insert($urtable,[
   'userid' => $uid,
   'requestsubject' => $requestsubject,
   'requestbody' => $requestbody,
   'requeststatus' => "Not acknowledged",
-]);
+]); } catch (MeekdroDBException $e) {
+  echo ".... ";
+}
+*/
+
+  if(!isset($_POST["rsubmit"])) {
 
 ?>
 
-<form class="needs-validation" novalidate action="index.php" method="get">
+<form class="needs-validation" action="index.php" method="post" novalidate>
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationCustom01">Request Name/Subject</label>
-      <input type="text" class="form-control" id="validationCustom01" placeholder="Request Subject" name="requestsubject" 
+      <input type="text" class="form-control" id="validationCustom01" placeholder="e.g. Bitcoin purchase" name="requestsubject" 
         required>
       <div class="valid-feedback">
         Looks good!
@@ -43,7 +49,7 @@ DB::insert($urtable,[
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationCustom02">Full query</label>
-      <input type="textarea" class="form-control" id="validationCustom02" placeholder="Request Body" name="requestbody" 
+      <input type="textarea" class="form-control" id="validationCustom02" placeholder="e.g. I would like to make a 1601OPT purchase" name="requestbody" 
         required>
       <div class="valid-feedback">
         Looks good!
@@ -61,7 +67,7 @@ DB::insert($urtable,[
       </div>
     </div>
   </div>
-  <button class="btn btn-primary btn-sm" type="submit">Request</button>
+  <button class="btn btn-primary btn-sm" type="submit" name="rsubmit">Request</button>
 </form>
 
 <script>(function() {
@@ -95,9 +101,17 @@ foreach ($results as $row) {
   echo "-------------<br />";
 }
 
+  } else { 
 
-        } else {
-          echo "Form test";
+    DB::insert($urtable,[
+      'userid' => $uid,
+      'requestsubject' => $requestsubject,
+      'requestbody' => $requestbody,
+      'requeststatus' => "Not acknowledged",
+    ]);
+     echo "Request submitted";
+  }
+       //   echo "Form test";
 /* 
 DB::insert('accounts', [
   'username' => $username,
@@ -113,7 +127,6 @@ DB::insert($urtable,[
 ]);*/
 
 
-} // end of request
 
 // user is not logged in
       } else {
