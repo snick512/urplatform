@@ -4,7 +4,7 @@ $title = 'Account Settings';
 require '../login/misc/pagehead.php';
 $uid = $_SESSION['uid'];
 $usr = PHPLogin\UserHandler::pullUserById($uid);
-include "../login/misc/pullnav.php";
+require "../login/misc/pullnav.php";
 
 ?>
 
@@ -123,13 +123,13 @@ include "../login/misc/pullnav.php";
 
 
 
-  <script type="text/javascript" src="http://platform.urcpu.com/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
   <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="http://platform.urcpu.com/js/popper.min.js"></script>
+  <script type="text/javascript" src="../js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="http://platform.urcpu.com/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="http://platform.urcpu.com/js/mdb.min.js"></script>
+  <script type="text/javascript" src="../js/mdb.min.js"></script>
   <!-- Initializations -->
   <script type="text/javascript">
     // Animations initialization
