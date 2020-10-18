@@ -6,3 +6,4 @@
       <link href="'.$this->base_url.'/login/css/main.css" rel="stylesheet" media="screen">';*/
 
       echo '<script src="'.$this->base_url.'/vendor/components/jquery/jquery.min.js" type="application/javascript"></script>';
+
