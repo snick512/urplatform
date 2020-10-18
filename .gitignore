@@ -8,3 +8,5 @@ composer.phar
 login/_index.php
 login/login.php
 login/signupbackup.php
+vswork.code-workspace
+.vscode/launch.json
