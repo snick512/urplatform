@@ -10,17 +10,23 @@ if (@get_headers($usr['UserImage'])[0] == 'HTTP/1.1 404 Not Found' || $usr['User
 } else {
     $imgpath = $usr['UserImage'];
 }
-?>
 
+require "../login/misc/pullnav.php"; 
+
+?>
 <script src="js/profileupdate.js"></script>
 <script src="js/croppie.min.js"></script>
 <link href="css/croppie.min.css" rel="stylesheet" media="screen">
 
-</head>
-<body>
-  <?php require '../login/misc/pullnav.php'; ?>
+    
+
+  <!--Main layout-->
+  <main class="mt-5 pt-4">
     <div class="container">
-        <div class="col-sm-2"></div>
+
+      <!--Section: Edit Profile -->
+      <section>
+      <div class="col-sm-2"></div>
         <div class="col-sm-8">
             <h2><?php echo $title;?></h2>
             <form id="profileForm" enctype="multipart/form-data">
@@ -73,7 +79,74 @@ if (@get_headers($usr['UserImage'])[0] == 'HTTP/1.1 404 Not Found' || $usr['User
             </div>
         </div>
         <div class="col-sm-2"></div>
-    </div>
-</body>
 
+      </section>
+
+
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <div class="pt-4">
+      <a class="btn btn-outline-white" href="https://urcpu.com/gate/" target="_blank"
+        role="button"><i class="fas fa-credit-card ml-2"></i> Make a payment</a>
+    </div>
+    <!--/.Call to action-->
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-4">
+      <a href="https://www.facebook.com/switchboardoffice" target="_blank">
+        <i class="fab fa-facebook-f mr-3"></i>
+      </a>
+
+      <a href="https://twitter.com/snick512" target="_blank">
+        <i class="fab fa-twitter mr-3"></i>
+      </a>
+
+      <a href="https://www.youtube.com/tyclifford" target="_blank">
+        <i class="fab fa-youtube mr-3"></i>
+      </a>
+      <a href="https://github.com/snick512" target="_blank">
+        <i class="fab fa-github mr-3"></i>
+      </a>
+
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2020 UR CPU, Tyeme & Co., dba | +1-631-663-1317
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+
+
+
+  <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+  </script>
+
+</body>
 </html>
