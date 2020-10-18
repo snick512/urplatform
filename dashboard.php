@@ -103,14 +103,14 @@ DB::insert('accounts', [
   'username' => $username,
   'password' => $password,
 ]);
-*/
+
 
 DB::insert($urtable,[
   'userid' => $uid,
   'requestsubject' => $requestsubject,
   'requestbody' => $requestbody,
   'requeststatus' => "Not acknowledged",
-]);
+]);*/
 
 
 } // end of request
