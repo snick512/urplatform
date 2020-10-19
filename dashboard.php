@@ -1,4 +1,7 @@
-<?php $uid = $_SESSION['uid']; ?>
+<?php 
+$uid = $_SESSION['uid']; 
+$today = date("Y-m-d H:i:s"); 
+?>
   <!--Main layout-->
   <main class="mt-5 pt-4">
     <div class="container">
@@ -18,6 +21,7 @@
 
 $requestsubject = $_POST["requestsubject"];
 $requestbody = $_POST["requestbody"];
+$requestprivate = $_POST["requestprivate"];
 
 //DB::$error_handler = "false";
 //DB::$throw_exception_on_error = "true";
@@ -99,15 +103,17 @@ form.classList.add('was-validated');
 // show existing requests
 //echo "<table id=\"tablePreview\" class=\"table\"><thead><tr><th>Request</th><th>Body</th><th>Status</th></tr></thead><tbody><tr>";
 
-echo "<table id=\"tablePreview\" class=\"table\"><thead><tr><th>Request</th><th>Body</th><th>Status</th></tr></thead><tbody><tr>";
+echo "<table id=\"tablePreview\" class=\"table table-hover\"><thead><tr><th>Request</th><th>Body</th><th>Status</th><th>Date</th></tr></thead><tbody><tr>";
 
-$results = DB::query("SELECT requestsubject, requestbody, requeststatus FROM $urtable WHERE %i", $uid);
+$results = DB::query("SELECT requestsubject, requestbody, requeststatus, requestdate FROM $urtable WHERE userid=%s", $uid);
 
 foreach ($results as $row) {
  
   echo "<td>" . $row['requestsubject'] . "</td>";
   echo "<td>" . $row['requestbody'] . "</td>";
-  echo "<td>" . $row['requeststatus'] . "</td>";
+   // echo "<td>" . $row['requeststatus'] . "</td>";
+   echo "<td><button type=\"button\" class=\"btn btn-warning\">". $row['requeststatus']."</button>";
+   echo "<td>" . $row['requestdate'] ."</td>";
   echo "</tr>";
 //  echo "-------------<br />";
 }
@@ -119,6 +125,7 @@ echo "</tbody></table>";
       'requestsubject' => $requestsubject,
       'requestbody' => $requestbody,
       'requeststatus' => "Not acknowledged",
+      'requestdate' => $today,
     ]);
      echo "Request submitted. <a href=\"index.php\">Reload</a>";
   }
@@ -147,51 +154,11 @@ DB::insert($urtable,[
 
       </section>
 
-      <!--Section: More-->
+      <!--Section: More
       <section>
-
         <h2 class="my-5 h3 text-center"></h2>
-<!--
 
-<table id="tablePreview" class="table">
-
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Name</th>
-      <th>ETA</th>
-      <th>Price</th>
-
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-
-</table>
-
--->
-      </section>
+      </section>-->
       
 
     </div>
@@ -255,3 +222,14 @@ DB::insert($urtable,[
     new WOW().init();
 
   </script>
+
+
+  <script type="text/javascript">
+// Basic example
+$(document).ready(function () {
+  $('#tablePreview').DataTable({
+    "pagingType": "simple_numbers" // "simple" option for 'Previous' and 'Next' buttons only
+  });
+  $('.dataTables_length').addClass('bs-select');
+});
+</script> 
