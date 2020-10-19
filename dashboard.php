@@ -49,8 +49,10 @@ DB::insert($urtable,[
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationCustom02">Full query</label>
-      <input type="textarea" class="form-control" id="validationCustom02" placeholder="e.g. I would like to make a 1601OPT purchase" name="requestbody" 
-        required>
+     <!-- <input type="textarea" class="form-control" id="validationCustom02" placeholder="e.g. I would like to make a 1601OPT purchase" name="requestbody"> -->
+
+     <textarea class="form-control" id="validationCustom02" rows="5" placeholder="e.g. I would like to make a 1601OPT purchase" name="requestbody" required=""></textarea>
+      
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -69,7 +71,7 @@ DB::insert($urtable,[
   </div>
   <button class="btn btn-primary btn-sm" type="submit" name="rsubmit">Request</button>
 </form>
-
+  
 <script>(function() {
 'use strict';
 window.addEventListener('load', function() {
@@ -89,18 +91,27 @@ form.classList.add('was-validated');
 })();
 </script>
 
+<!-- Table -->
+
+
+
 <?php 
 // show existing requests
+//echo "<table id=\"tablePreview\" class=\"table\"><thead><tr><th>Request</th><th>Body</th><th>Status</th></tr></thead><tbody><tr>";
 
+echo "<table id=\"tablePreview\" class=\"table\"><thead><tr><th>Request</th><th>Body</th><th>Status</th></tr></thead><tbody><tr>";
 
-$results = DB::query("SELECT requestsubject, requestbody, requeststatus FROM $urtable");
+$results = DB::query("SELECT requestsubject, requestbody, requeststatus FROM $urtable WHERE %i", $uid);
+
 foreach ($results as $row) {
-  echo "Request: " . $row['requestsubject'] . "<br />";
-  echo "Full query: " . $row['requestbody'] . "<br />";
-  echo "Status: " . $row['requeststatus'] . "<br />";
-  echo "-------------<br />";
+ 
+  echo "<td>" . $row['requestsubject'] . "</td>";
+  echo "<td>" . $row['requestbody'] . "</td>";
+  echo "<td>" . $row['requeststatus'] . "</td>";
+  echo "</tr>";
+//  echo "-------------<br />";
 }
-
+echo "</tbody></table>";
   } else { 
 
     DB::insert($urtable,[
@@ -109,7 +120,7 @@ foreach ($results as $row) {
       'requestbody' => $requestbody,
       'requeststatus' => "Not acknowledged",
     ]);
-     echo "Request submitted";
+     echo "Request submitted. <a href=\"index.php\">Reload</a>";
   }
        //   echo "Form test";
 /* 
