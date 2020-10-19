@@ -5,9 +5,17 @@ if ((isset($_SESSION)) && array_key_exists('username', $_SESSION)) {
 $userrole = 'loginpage';
 $title = 'Sign Up';
 require 'misc/pagehead.php';
+require 'misc/pullnav.php';
+echo "<script src=\"https://www.google.com/recaptcha/api.js\"></script>";
 ?>
-  <?php require 'misc/pullnav.php'; ?>
-  
+
+<script>
+   function onSubmit(token) {
+     document.getElementById("submit").submit();
+   }
+ </script>  
+
+
   <!--Main layout-->
   <main>
     <div class="container">
@@ -27,7 +35,7 @@ require 'misc/pagehead.php';
                 <input name="password1" id="password1" type="password" class="form-control input-lg" placeholder="Password">
                 <input name="password2" id="password2" type="password" class="form-control input-lg" placeholder="Repeat Password"> </div>
             <div class="form-group">
-                <button name="Submit" id="submitbtn" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+                <button name="Submit" id="submitbtn" class="btn btn-lg btn-primary btn-block g-recaptcha" data-sitekey="6LeKK9kZAAAAAOdz5tfl6OnyCyeKDBVm8I8gdwn-" data-callback='onSubmit' data-action='submit' type="submit">Sign up</button>
             </div>
         </form>
         <div id="message"></div>

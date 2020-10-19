@@ -3,8 +3,13 @@ $userrole = 'loginpage';
 $title = 'Forgot Password';
 require 'misc/pagehead.php';
 require 'misc/pullnav.php';
+echo "<script src=\"https://www.google.com/recaptcha/api.js\"></script>";
 ?>
-
+<script>
+   function onSubmit(token) {
+     document.getElementById("submit").submit();
+   }
+ </script>  
 <main>
     <div class="container">
 
@@ -23,7 +28,7 @@ require 'misc/pullnav.php';
                 <div class="form-group">
                     <input name="email" id="email" type="text" class="form-control input-lg" placeholder="Email Address" autofocus> </div>
                 <div class="form-group">
-                    <button name="Submit" id="submitbtn" class="btn btn-lg btn-primary btn-block" type="submit">Send Reset Email</button>
+                    <button name="Submit" id="submitbtn" class="btn btn-lg btn-primary btn-block g-recaptcha" data-sitekey="6LeKK9kZAAAAAOdz5tfl6OnyCyeKDBVm8I8gdwn-" data-callback='onSubmit' data-action='submit' type="submit">Send Reset Email</button>
                 </div>
             </form>
             <div id="message"></div>

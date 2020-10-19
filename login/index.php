@@ -3,8 +3,14 @@ $userrole = 'loginpage';
 $title = 'Login';
 include 'misc/pagehead.php';
 require 'misc/pullnav.php';
+echo "<script src=\"https://www.google.com/recaptcha/api.js\"></script>";
 ?>
   
+  <script>
+   function onSubmit(token) {
+     document.getElementById("submit").submit();
+   }
+ </script>  
   <!--Main layout-->
   <main>
     <div class="container">
@@ -21,7 +27,7 @@ require 'misc/pullnav.php';
                     <input name="myusername" id="myusername" type="text" class="form-control input-lg" placeholder="Username" autofocus>
                     <input name="mypassword" id="mypassword" type="password" class="form-control input-lg" placeholder="Password"> </div>
                 <div class="form-group">
-                    <button name="Submit" id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+                <button name="Submit" id="submit" class="btn btn-lg btn-primary btn-block g-recaptcha" data-sitekey="6LeKK9kZAAAAAOdz5tfl6OnyCyeKDBVm8I8gdwn-" data-callback='onSubmit' data-action='submit' type="submit">Log In</button>
                 </div>
                 <div class="form-group">
                     <div class="checkbox">
