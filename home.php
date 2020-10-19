@@ -7,7 +7,7 @@
       <?php if ($auth->isLoggedIn()) {
         echo "<h3 class=\"h3 text-center mb-5\">Free the spirits, $uruser</h3>";
       } else {
-        echo "<h3 class=\"h3 text-center mb-5\">Free the spirits</h3>";
+        echo "<h3 class=\"h3 text-center mb-5\">Free the spirits, <a href=\"login/\">login</a></h3>";
       } ?>
 
         <!--Grid row-->
