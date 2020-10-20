@@ -1,76 +1,17 @@
   <!--Main layout-->
+  
+  <div class="container my-5 py-5 z-depth-3">
+  
   <main class="mt-5 pt-4">
 
   
-  
-  <div class="container my-5 py-5 z-depth-1">
-
-
-<!--Section: Content-->
-<section class="px-md-5 mx-md-5 dark-grey-text text-center">
-
-<h3 class="font-weight-bold">Welcome to UR CPU</h3>
-
-<hr class="my-5">
-
-
-  <!--Grid row-->
-  <div class="row d-flex justify-content-center">
-
-    <!--Grid column-->
-    <div class="col-lg-8">
-
-      <!--Grid row-->
-      <div class="row">
-
-        <!--First column-->
-        <div class="col-md-3 col-6 mb-1">
-          <i class="fas fa-desktop fa-3x blue-text"></i>
-        </div>
-        <!--/First column-->
-
-        <!--Second column-->
-        <div class="col-md-3 col-6 mb-4">
-          <i class="fas fa-hand-holding-usd fa-3x teal-text"></i>
-        </div>
-        <!--/Second column-->
-
-        <!--Third column-->
-        <div class="col-md-3 col-6 mb-4">
-          <i class="fas fa-receipt fa-3x indigo-text"></i>
-        </div>
-        <!--/Third column-->
-
-        <!--Fourth column-->
-        <div class="col-md-3 col-6 mb-4">
-          <i class="fas fa-code-branch fa-3x deep-purple-text"></i>
-        </div>
-        <!--/Fourth column-->
-
-      </div>
-      <!--/Grid row-->
-
-      <!-- <p></p> -->
-
-    </div>
-    <!--Grid column-->
-
-  </div>
-  <!--Grid row-->
-
-
-</section>
-<!--Section: Content-->
-
-
-</div>
-    
-    
     
     <div class="container">
 
       <!--Section: Main features & Quick Start-->
       <section>
+
+      <h3 class="font-weight-bold">Welcome to UR CPU</h3>
       <?php if ($auth->isLoggedIn()) {
         echo "<h3 class=\"h3 text-center mb-5\">Free the spirits, $uruser</h3>";
       } else {
@@ -144,7 +85,7 @@
      
 
 <!-- Services --> 
-
+</div>
 <div class="container my-5">
 
   <!-- Section -->
@@ -251,6 +192,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
       <!--Section: More-->
 
     </div>
+  </div>
+  
   </main>
   <!--Main layout-->
 
