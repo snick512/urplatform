@@ -19,7 +19,7 @@ echo "<script src=\"https://www.google.com/recaptcha/api.js\"></script>";
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/additional-methods.min.js"></script>
 
-    <div class="container logindiv">
+    <div class="container logindiv my-5 py-5 z-depth-3">
         <div class="col-sm-4"></div>
         <div class="col-sm-4">
             <form class="text-center" id="forgotpassword" name="forgotpassword" method="post">
