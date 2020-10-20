@@ -1,5 +1,72 @@
   <!--Main layout-->
   <main class="mt-5 pt-4">
+
+  
+  
+  <div class="container my-5 py-5 z-depth-1">
+
+
+<!--Section: Content-->
+<section class="px-md-5 mx-md-5 dark-grey-text text-center">
+
+<h3 class="font-weight-bold">Welcome to UR CPU</h3>
+
+<hr class="my-5">
+
+
+  <!--Grid row-->
+  <div class="row d-flex justify-content-center">
+
+    <!--Grid column-->
+    <div class="col-lg-8">
+
+      <!--Grid row-->
+      <div class="row">
+
+        <!--First column-->
+        <div class="col-md-3 col-6 mb-1">
+          <i class="fas fa-desktop fa-3x blue-text"></i>
+        </div>
+        <!--/First column-->
+
+        <!--Second column-->
+        <div class="col-md-3 col-6 mb-4">
+          <i class="fas fa-hand-holding-usd fa-3x teal-text"></i>
+        </div>
+        <!--/Second column-->
+
+        <!--Third column-->
+        <div class="col-md-3 col-6 mb-4">
+          <i class="fas fa-receipt fa-3x indigo-text"></i>
+        </div>
+        <!--/Third column-->
+
+        <!--Fourth column-->
+        <div class="col-md-3 col-6 mb-4">
+          <i class="fas fa-code-branch fa-3x deep-purple-text"></i>
+        </div>
+        <!--/Fourth column-->
+
+      </div>
+      <!--/Grid row-->
+
+      <!-- <p></p> -->
+
+    </div>
+    <!--Grid column-->
+
+  </div>
+  <!--Grid row-->
+
+
+</section>
+<!--Section: Content-->
+
+
+</div>
+    
+    
+    
     <div class="container">
 
       <!--Section: Main features & Quick Start-->
@@ -74,7 +141,73 @@
         <!--/Grid row-->
 
       </section>
-      <!--Section: Main features & Quick Start-->
+     
+
+<!-- Services --> 
+
+<div class="container my-5">
+
+  <!-- Section -->
+  <section>
+
+    <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4"></h6>
+    <h3 class="font-weight-bold text-center dark-grey-text pb-2">Services & Solutions</h3>
+    <hr class="w-header my-4">
+    <p class="lead text-center text-muted pt-2 mb-5">A crypto community doing crypto things.</p>
+
+    <div class="row">
+
+      <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card text-center bg-success text-white">
+          <div class="card-body">
+            <p class="mt-4 pt-2"><i class="fab fa-btc fa-4x"></i></p>
+            <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">Cryptocurrency Exchange</a></h5>
+            <p class="mb-4">Our identity aware application ensures transactions and information are kept private.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card text-center blue lighten-1 text-white">
+          <div class="card-body">
+            <p class="mt-4 pt-2"><i class="fas fa-shipping-fast fa-4x text-white"></i></p>
+            <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">Dropship</a></h5>
+            <p class="mb-4">Need a proxy making a purchase? No problem!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card text-center deep-purple lighten-1 text-white">
+          <div class="card-body">
+            <p class="mt-4 pt-2"><i class="fas fa-crop-alt fa-4x"></i></p>
+            <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">Webmaster</a></h5>
+            <p class="mb-4">WordPress, old to new, e-Commerce, management, hosting and more.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-3">
+        <div class="card text-center orange lighten-1 text-white">
+          <div class="card-body">
+            <p class="mt-4 pt-2"><i class="fas fa-yin-yang fa-4x text-white"></i></p>
+            <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">"Just Ask"</a></h5>
+            <p class="mb-4">Really, just ask.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- Section -->
+
+</div>
+
+
+
+
 
       <hr class="my-5">
 
@@ -96,51 +229,11 @@
 
       </section>
 
-      <!--Section: More-->
+   <!--Section: More-->
       <section>
 
         <h2 class="my-5 h3 text-center"></h2>
-<!--
 
-<table id="tablePreview" class="table">
-
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Name</th>
-      <th>ETA</th>
-      <th>Price</th>
-
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-
-</table>
-
-
-<br />-->
 <div id="lhc_faq_embed_container" ></div>
 
 
