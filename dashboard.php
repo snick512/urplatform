@@ -4,7 +4,7 @@ $today = date("Y-m-d H:i:s");
 ?>
   <!--Main layout-->
   <main class="mt-5 pt-4">
-    <div class="container">
+    <div class="container my-5 py-5 z-depth-3">
 
       <hr class="my-5">
 
@@ -107,12 +107,26 @@ echo "<table id=\"tablePreview\" class=\"table table-hover\"><thead><tr><th>Requ
 
 $results = DB::query("SELECT requestsubject, requestbody, requeststatus, requestdate FROM $urtable WHERE userid=%s", $uid);
 
+
 foreach ($results as $row) {
  
   echo "<td>" . $row['requestsubject'] . "</td>";
   echo "<td>" . $row['requestbody'] . "</td>";
    // echo "<td>" . $row['requeststatus'] . "</td>";
-   echo "<td><button type=\"button\" class=\"btn btn-warning\">". $row['requeststatus']."</button>";
+   $urstatus = $row['requeststatus'];
+  // status
+    if($urstatus == "Not acknowledged") {
+      echo "<td><button type=\"button\" class=\"btn btn-danger\">". $row['requeststatus']."</button>";
+    } elseif ($urstatus == "Acknowledged") { 
+      echo "<td><button type=\"button\" class=\"btn btn-warning\">". $row['requeststatus']."</button>";
+    } elseif ($urstatus == "In Progress") {
+      echo "<td><button type=\"button\" class=\"btn btn-secondary\">". $row['requeststatus']."</button>";
+    } elseif ($urstatus == "ID Request") {
+      echo "<td><button type=\"button\" class=\"btn btn-info\">". $row['requeststatus']."</button>";
+    } else {
+      echo "<td><button type=\"button\" class=\"btn btn-danger\">$urstatus</button>";
+    }
+    //echo "<td><button type=\"button\" class=\"btn btn-warning\">". $row['requeststatus']."</button>";
    echo "<td>" . $row['requestdate'] ."</td>";
   echo "</tr>";
 //  echo "-------------<br />";
