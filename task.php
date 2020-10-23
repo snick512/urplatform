@@ -3,11 +3,6 @@ $uid = $_SESSION['uid'];
 
 $urtask = $_GET["task"];
 
-
-
-  // basic viewer protection 
- // if (!$uid == $urtask) { "No permission";  die(); }
-
 ?>
   <!--Main layout-->
   <main class="mt-5 pt-4">
@@ -29,7 +24,22 @@ $urtask = $_GET["task"];
         if (!$uid == $row['userid']) { 
           echo "Invalid.";
         } else {
-          echo "Request status: ".$row['requeststatus']." <br />".$row['requestdetails']."";
+?>
+          <div class="card text-center">
+          <div class="card-header">
+            <?php echo $row['id']; ?>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $row['requestsubject']; ?></h5>
+            <p class="card-text"><?php echo $row['requestbody']; ?><hr />
+            <?php echo $row['requestdetails']; ?></p>
+          </div>
+          <div class="card-footer text-muted">
+            <?php echo $row['requestdate']; ?>
+          </div>
+        </div>
+<?php 
+          //echo "Request status: ".$row['requeststatus']." <br />".$row['requestdetails']."";
         }
 
        
