@@ -102,7 +102,7 @@
         <div class="card text-center bg-success text-white">
           <div class="card-body">
             <p class="mt-4 pt-2"><i class="fab fa-btc fa-4x"></i></p>
-            <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">Cryptocurrency Exchange</a></h5>
+            <h5 class="font-weight-normal my-4 py-2">Private Crypto Orders</h5>
             <p class="mb-4">Our identity aware application ensures transactions and information are kept private.
             </p>
           </div>
@@ -113,7 +113,7 @@
         <div class="card text-center blue lighten-1 text-white">
           <div class="card-body">
             <p class="mt-4 pt-2"><i class="fas fa-shipping-fast fa-4x text-white"></i></p>
-            <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">Dropship</a></h5>
+            <h5 class="font-weight-normal my-4 py-2">Dropship</h5>
             <p class="mb-4">Need a proxy making a purchase? No problem!</p>
           </div>
         </div>
@@ -123,7 +123,7 @@
         <div class="card text-center deep-purple lighten-1 text-white">
           <div class="card-body">
             <p class="mt-4 pt-2"><i class="fas fa-crop-alt fa-4x"></i></p>
-            <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">Webmaster</a></h5>
+            <h5 class="font-weight-normal my-4 py-2">Webmaster</h5>
             <p class="mb-4">WordPress, old to new, e-Commerce, management, hosting and more.</p>
           </div>
         </div>
@@ -133,7 +133,7 @@
         <div class="card text-center orange lighten-1 text-white">
           <div class="card-body">
             <p class="mt-4 pt-2"><i class="fas fa-yin-yang fa-4x text-white"></i></p>
-            <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">"Just Ask"</a></h5>
+            <h5 class="font-weight-normal my-4 py-2">Just Ask"</h5>
             <p class="mb-4">Really, just ask.</p>
           </div>
         </div>
