@@ -11,3 +11,5 @@ login/signupbackup.php
 vswork.code-workspace
 .vscode/launch.json
 login/db.class.php
+/admin/
+login/db.php
