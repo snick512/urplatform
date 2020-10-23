@@ -5,7 +5,7 @@ URPlatform.
 Basic integration of MDB jQuery and PHP-Login framework. 
 
 */ 
-$title = 'Home';
+$title = 'UR CPU - A crypto community doing crypto things.';
 
 include "login/misc/pagehead.php";
 $uruser = $_SESSION['username'];
@@ -13,9 +13,12 @@ $uruser = $_SESSION['username'];
 require "login/misc/pullnav.php";
 
 require_once 'login/db.class.php';
-DB::$user = 'platform';
-DB::$password = '654654654654';
-DB::$dbName = 'platform';
+
+
+DB::$user = '';
+DB::$password = '';
+DB::$dbName = '';
+
 $urtable = "urbase_requests"; 
 
 
@@ -25,6 +28,7 @@ if ($auth->isLoggedIn()) {
 //echo "We're logged in as ".$_SESSION['username']."";
 
 //include "home.php";
+
 include "dashboard.php";
 
 } else {
