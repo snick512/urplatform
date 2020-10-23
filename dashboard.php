@@ -14,28 +14,11 @@ $today = date("Y-m-d H:i:s");
 
       <?php if ($auth->isLoggedIn()) {
         echo "<h3 class=\"h3 text-center mb-5\">$uruser - ID: $uid - Dashboard</h3>";
-// form testing 
 
-
-//$ursubmit = $_GET["submit"];
 
 $requestsubject = $_POST["requestsubject"];
 $requestbody = $_POST["requestbody"];
 $requestprivate = $_POST["requestprivate"];
-
-//DB::$error_handler = "false";
-//DB::$throw_exception_on_error = "true";
-/*
-try {   
-DB::insert($urtable,[
-  'userid' => $uid,
-  'requestsubject' => $requestsubject,
-  'requestbody' => $requestbody,
-  'requeststatus' => "Not acknowledged",
-]); } catch (MeekdroDBException $e) {
-  echo ".... ";
-}
-*/
 
   if(!isset($_POST["rsubmit"])) {
 
@@ -95,41 +78,39 @@ form.classList.add('was-validated');
 })();
 </script>
 
-<!-- Table -->
-
-
 
 <?php 
 // show existing requests
-//echo "<table id=\"tablePreview\" class=\"table\"><thead><tr><th>Request</th><th>Body</th><th>Status</th></tr></thead><tbody><tr>";
 
 echo "<table id=\"tablePreview\" class=\"table table-hover\"><thead><tr><th>Request</th><th>Body</th><th>Status</th><th>Date</th></tr></thead><tbody><tr>";
 
-$results = DB::query("SELECT requestsubject, requestbody, requeststatus, requestdate FROM $urtable WHERE userid=%s", $uid);
+$results = DB::query("SELECT id, requestsubject, requestbody, requeststatus, requestdate FROM $urtable WHERE userid=%s", $uid);
 
 
 foreach ($results as $row) {
+
+  $taskid = $row['id'];
  
   echo "<td>" . $row['requestsubject'] . "</td>";
   echo "<td>" . $row['requestbody'] . "</td>";
-   // echo "<td>" . $row['requeststatus'] . "</td>";
-   $urstatus = $row['requeststatus'];
+  
+  $urstatus = $row['requeststatus'];
   // status
     if($urstatus == "Not acknowledged") {
-      echo "<td><button type=\"button\" class=\"btn btn-danger\">". $row['requeststatus']."</button>";
+      echo "<td><a href=\"detail.php?task=$taskid\"><button type=\"button\" class=\"btn btn-danger\">". $row['requeststatus']."</button></a>";
     } elseif ($urstatus == "Acknowledged") { 
-      echo "<td><button type=\"button\" class=\"btn btn-warning\">". $row['requeststatus']."</button>";
+      echo "<td><a href=\"detail.php?task=$taskid\"><button type=\"button\" class=\"btn btn-warning\">". $row['requeststatus']."</button></a>";
     } elseif ($urstatus == "In Progress") {
-      echo "<td><button type=\"button\" class=\"btn btn-secondary\">". $row['requeststatus']."</button>";
+      echo "<td><a href=\"detail.php?task=$taskid\"><button type=\"button\" class=\"btn btn-secondary\">". $row['requeststatus']."</button></a>";
     } elseif ($urstatus == "ID Request") {
-      echo "<td><button type=\"button\" class=\"btn btn-info\">". $row['requeststatus']."</button>";
+      echo "<td><a href=\"detail.php?task=$taskid\"><button type=\"button\" class=\"btn btn-info\">". $row['requeststatus']."</button></a>";
     } else {
-      echo "<td><button type=\"button\" class=\"btn btn-danger\">$urstatus</button>";
+      echo "<td><a href=\"detail.php?task=$taskid\"><button type=\"button\" class=\"btn btn-danger\">$urstatus</button></a>";
     }
-    //echo "<td><button type=\"button\" class=\"btn btn-warning\">". $row['requeststatus']."</button>";
-   echo "<td>" . $row['requestdate'] ."</td>";
+
+    echo "<td>" . $row['requestdate'] ."</td>";
   echo "</tr>";
-//  echo "-------------<br />";
+
 }
 echo "</tbody></table>";
   } else { 
@@ -143,38 +124,13 @@ echo "</tbody></table>";
     ]);
      echo "Request submitted. <a href=\"index.php\">Reload</a>";
   }
-       //   echo "Form test";
-/* 
-DB::insert('accounts', [
-  'username' => $username,
-  'password' => $password,
-]);
-
-
-DB::insert($urtable,[
-  'userid' => $uid,
-  'requestsubject' => $requestsubject,
-  'requestbody' => $requestbody,
-  'requeststatus' => "Not acknowledged",
-]);*/
-
-
 
 // user is not logged in
       } else {
-    //    echo "<h3 class=\"h3 text-center mb-5\">Free the spirits</h3>";
         echo "You're not logged in. <a href=\"login/\">Login here</a>.";
       } ?>
 
       </section>
-
-      <!--Section: More
-      <section>
-        <h2 class="my-5 h3 text-center"></h2>
-
-      </section>-->
-      
-
     </div>
   </main>
 
@@ -236,14 +192,3 @@ DB::insert($urtable,[
     new WOW().init();
 
   </script>
-
-
-  <script type="text/javascript">
-// Basic example
-$(document).ready(function () {
-  $('#tablePreview').DataTable({
-    "pagingType": "simple_numbers" // "simple" option for 'Previous' and 'Next' buttons only
-  });
-  $('.dataTables_length').addClass('bs-select');
-});
-</script> 
