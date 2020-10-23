@@ -12,14 +12,8 @@ $uruser = $_SESSION['username'];
 
 require "login/misc/pullnav.php";
 
-require_once 'login/db.class.php';
+require_once 'login/db.php';
 
-
-DB::$user = '';
-DB::$password = '';
-DB::$dbName = '';
-
-$urtable = "urbase_requests"; 
 
 
 if ($auth->isLoggedIn()) {
