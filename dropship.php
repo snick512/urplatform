@@ -128,7 +128,7 @@ require "login/misc/pullnav.php";
           <li class="timeline-element">
             <h5 class="font-weight-bold dark-grey-text mb-3">You request a dropship</h5>
             <p class="grey-text font-small"><i class="far fa-smile fa-4x"></i></p>
-            <p class="text-muted">Let us know where the product is (eBay, Amazon, etc) and what currency you'll be paying in..</p>
+            <p class="text-muted">Let us know where the product is (eBay, Amazon, etc) and the currency you'll be paying in.</p>
           </li>
 
           <li class="timeline-element">
