@@ -73,7 +73,7 @@
 
             <p class="h5 text-center mb-4">Since it's Halloween season!</p>
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NIpns4R9Ep4" allowfullscreen></iframe>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=lj4WbJoFYlE" allowfullscreen></iframe>
             </div>
           </div>
           <!--/Grid column-->
@@ -153,7 +153,7 @@
       <hr class="my-5">
 
       <!--Section: Not enough-->
-      <section>
+   <!--   <section>
 
         <h2 class="my-5 h3 text-center">Get started</h2>
     <center>   <a href="consult.php"
@@ -168,7 +168,7 @@
                                     height=600`);
  return false;"><button class="btn blue-gradient">Free consultation</button></a></center>
 
-      </section>
+      </section>-->
 
    <!--Section: More-->
       <section>
@@ -231,7 +231,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      © 2020 UR CPU, Tyeme & Co., dba | +1-631-663-1317
+      © 2020 UR CPU, Tyeme & Co., dba | +1-631-722-7241
     </div>
     <!--/.Copyright-->
 
