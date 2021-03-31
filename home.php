@@ -1,9 +1,17 @@
   <!--Main layout-->
+  
+  <div class="container my-5 py-5 z-depth-3">
+  
   <main class="mt-5 pt-4">
+
+  
+    
     <div class="container">
 
       <!--Section: Main features & Quick Start-->
       <section>
+
+      <h3 class="font-weight-bold">Welcome to UR CPU</h3>
       <?php if ($auth->isLoggedIn()) {
         echo "<h3 class=\"h3 text-center mb-5\">Free the spirits, $uruser</h3>";
       } else {
@@ -65,7 +73,7 @@
 
             <p class="h5 text-center mb-4">Since it's Halloween season!</p>
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NIpns4R9Ep4" allowfullscreen></iframe>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=lj4WbJoFYlE" allowfullscreen></iframe>
             </div>
           </div>
           <!--/Grid column-->
@@ -74,12 +82,78 @@
         <!--/Grid row-->
 
       </section>
-      <!--Section: Main features & Quick Start-->
+     
+
+<!-- Services --> 
+</div>
+<div class="container my-5">
+
+  <!-- Section -->
+  <section>
+
+    <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4"></h6>
+    <h3 class="font-weight-bold text-center dark-grey-text pb-2">Services & Solutions</h3>
+    <hr class="w-header my-4">
+    <p class="lead text-center text-muted pt-2 mb-5">A crypto community doing crypto things.</p>
+
+    <div class="row">
+
+      <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card text-center bg-success text-white">
+          <div class="card-body">
+            <p class="mt-4 pt-2"><i class="fab fa-btc fa-4x"></i></p>
+            <h5 class="font-weight-normal my-4 py-2">Private Crypto Orders</h5>
+            <p class="mb-4">Our identity aware application ensures transactions and information are kept private.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card text-center blue lighten-1 text-white">
+          <div class="card-body">
+            <p class="mt-4 pt-2"><i class="fas fa-shipping-fast fa-4x text-white"></i></p>
+            <h5 class="font-weight-normal my-4 py-2">Dropship</h5>
+            <p class="mb-4">Need a proxy making a purchase? No problem!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card text-center deep-purple lighten-1 text-white">
+          <div class="card-body">
+            <p class="mt-4 pt-2"><i class="fas fa-crop-alt fa-4x"></i></p>
+            <h5 class="font-weight-normal my-4 py-2">Webmaster</h5>
+            <p class="mb-4">WordPress, old to new, e-Commerce, management, hosting and more.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-3">
+        <div class="card text-center orange lighten-1 text-white">
+          <div class="card-body">
+            <p class="mt-4 pt-2"><i class="fas fa-yin-yang fa-4x text-white"></i></p>
+            <h5 class="font-weight-normal my-4 py-2">Just Ask"</h5>
+            <p class="mb-4">Really, just ask.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- Section -->
+
+</div>
+
+
+
+
 
       <hr class="my-5">
 
       <!--Section: Not enough-->
-      <section>
+   <!--   <section>
 
         <h2 class="my-5 h3 text-center">Get started</h2>
     <center>   <a href="consult.php"
@@ -94,53 +168,13 @@
                                     height=600`);
  return false;"><button class="btn blue-gradient">Free consultation</button></a></center>
 
-      </section>
+      </section>-->
 
-      <!--Section: More-->
+   <!--Section: More-->
       <section>
 
         <h2 class="my-5 h3 text-center"></h2>
-<!--
 
-<table id="tablePreview" class="table">
-
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Name</th>
-      <th>ETA</th>
-      <th>Price</th>
-
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td></td>
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-
-</table>
-
-
-<br />-->
 <div id="lhc_faq_embed_container" ></div>
 
 
@@ -158,6 +192,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
       <!--Section: More-->
 
     </div>
+  </div>
+  
   </main>
   <!--Main layout-->
 
@@ -195,7 +231,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      © 2020 UR CPU, Tyeme & Co., dba | +1-631-663-1317
+      © 2020 UR CPU, Tyeme & Co., dba | +1-631-722-7241
     </div>
     <!--/.Copyright-->
 

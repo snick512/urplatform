@@ -5,7 +5,7 @@ URPlatform.
 Basic integration of MDB jQuery and PHP-Login framework. 
 
 */ 
-$title = 'UR CPU - A crypto community doing crypto things.';
+$title = 'Task Detail';
 
 include "login/misc/pagehead.php";
 $uruser = $_SESSION['username'];
@@ -23,7 +23,7 @@ if ($auth->isLoggedIn()) {
 
 //include "home.php";
 
-include "dashboard.php";
+include "task.php";
 
 } else {
 // not logged in

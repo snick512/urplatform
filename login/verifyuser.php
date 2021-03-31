@@ -6,7 +6,7 @@ require 'misc/pagehead.php';
 </head>
 <body>
 <?php require 'misc/pullnav.php'; ?>
-<div class="container">
+<div class="container my-5 py-5 z-depth-3">
 
 <?php
 //Pulls variables from url. Can pass 1 (verified) or 0 (unverified/blocked) into url

@@ -13,7 +13,7 @@ echo "<script src=\"https://www.google.com/recaptcha/api.js\"></script>";
  </script>  
   <!--Main layout-->
   <main>
-    <div class="container">
+    <div class="container container my-5 py-5 z-depth-3">
 
       <!--Section: Main features & Quick Start-->
       <section>
