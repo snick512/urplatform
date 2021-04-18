@@ -73,7 +73,7 @@
 
             <p class="h5 text-center mb-4">Feeling gud?</p>
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=i5EGUuovaxI" allowfullscreen></iframe>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/i5EGUuovaxI" allowfullscreen></iframe>
             </div>
           </div>
           <!--/Grid column-->
@@ -153,7 +153,7 @@
       <hr class="my-5">
 
       <!--Section: Not enough-->
-   <!--   <section>
+      <section>
 
         <h2 class="my-5 h3 text-center">Get started</h2>
     <center>   <a href="consult.php"
@@ -168,7 +168,7 @@
                                     height=600`);
  return false;"><button class="btn blue-gradient">Free consultation</button></a></center>
 
-      </section>-->
+      </section>
 
    <!--Section: More-->
       <section>
