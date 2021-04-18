@@ -231,7 +231,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      © 2017-2021 UR CPU, Tyeme & Co., dba | +1-631-722-7241
+      <?php echo $f_c; ?>
     </div>
     <!--/.Copyright-->
 

@@ -94,7 +94,7 @@ $urtask = $_GET["task"];
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      © 2020 UR CPU, Tyeme & Co., dba | +1-631-663-1317
+    <?php echo $f_c; ?>
     </div>
     <!--/.Copyright-->
 
