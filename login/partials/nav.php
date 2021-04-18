@@ -8,7 +8,7 @@
       <div class="container">
 
         <!-- Brand -->
-        <a class="navbar-brand" href="https://urcpu.com/" target="_blank">
+        <a class="navbar-brand" href="https://urcpu.com/">
           <strong>UR CPU</strong>
         </a>
 
@@ -30,9 +30,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://urcpu.com/gate/" target="_blank">Payments</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">Demos (soon)</a>
             </li>
           </ul>
 

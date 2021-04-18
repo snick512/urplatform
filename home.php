@@ -71,9 +71,9 @@
           <!--Grid column-->
           <div class="col-lg-6 col-md-12">
 
-            <p class="h5 text-center mb-4">Since it's Halloween season!</p>
+            <p class="h5 text-center mb-4">Feeling gud?</p>
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=lj4WbJoFYlE" allowfullscreen></iframe>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=i5EGUuovaxI" allowfullscreen></iframe>
             </div>
           </div>
           <!--/Grid column-->
@@ -133,7 +133,7 @@
         <div class="card text-center orange lighten-1 text-white">
           <div class="card-body">
             <p class="mt-4 pt-2"><i class="fas fa-yin-yang fa-4x text-white"></i></p>
-            <h5 class="font-weight-normal my-4 py-2">Just Ask"</h5>
+            <h5 class="font-weight-normal my-4 py-2">"Just Ask"</h5>
             <p class="mb-4">Really, just ask.</p>
           </div>
         </div>
@@ -231,7 +231,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      © 2020 UR CPU, Tyeme & Co., dba | +1-631-722-7241
+      <?php echo $f_c; ?>
     </div>
     <!--/.Copyright-->
 

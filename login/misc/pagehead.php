@@ -4,6 +4,9 @@
 * This is the master page that includes
 * all other controls and classes
 **/
+
+$f_c = "© 2017-2021 UR CPU, Tyeme & Co., dba | +1-631-722-7241";
+
 try {
     require dirname(dirname(__DIR__))."/vendor/autoload.php";
 
