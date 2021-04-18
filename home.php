@@ -133,7 +133,7 @@
         <div class="card text-center orange lighten-1 text-white">
           <div class="card-body">
             <p class="mt-4 pt-2"><i class="fas fa-yin-yang fa-4x text-white"></i></p>
-            <h5 class="font-weight-normal my-4 py-2">Just Ask"</h5>
+            <h5 class="font-weight-normal my-4 py-2">"Just Ask"</h5>
             <p class="mb-4">Really, just ask.</p>
           </div>
         </div>
