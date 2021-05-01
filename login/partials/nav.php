@@ -53,8 +53,7 @@
             
 
             <li class="nav-item">
-              <a href="https://urcpu.com" class="nav-link border border-light rounded"
-                target="_blank">
+              <a href="https://urcpu.com" class="nav-link border border-light rounded">
                 <i class="fas fa-user mr-2"></i>Dashboard
               </a>
             </li>
