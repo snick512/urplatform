@@ -27,7 +27,7 @@ $urtask = $_GET["task"];
 ?>
           <div class="card text-center">
           <div class="card-header">
-            <?php echo $row['id']; ?>
+            Task ID: <?php echo $row['id']; ?>
           </div>
           <div class="card-body">
             <h5 class="card-title"><?php echo $row['requestsubject']; ?></h5>
@@ -39,17 +39,8 @@ $urtask = $_GET["task"];
           </div>
         </div>
 <?php 
-          //echo "Request status: ".$row['requeststatus']." <br />".$row['requestdetails']."";
+
         }
-
-       
-        //$results = DB::query("SELECT id, requestsubject, requestbody, requeststatus, requestdate FROM $urtable WHERE id=%s", $urtask);
-
-
-       // print_r($results);
-     //   foreach($results as $row) { 
-       //   echo $row['requestdetails'];
-        //}
 
         // user is not logged in
       } else {
