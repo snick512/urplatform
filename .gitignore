@@ -13,3 +13,6 @@ vswork.code-workspace
 login/db.class.php
 /admin/
 login/db.php
+cmi.php
+stream.php
+dropship.php
