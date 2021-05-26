@@ -1,4 +1,12 @@
 <?php 
+
+include "login/misc/pagehead.php";
+$uruser = $_SESSION['username'];
+
+require "login/misc/pullnav.php";
+
+require_once 'login/db.php';
+
 $uid = $_SESSION['uid']; 
 
 $urtask = $_GET["task"];
@@ -16,34 +24,29 @@ $urtask = $_GET["task"];
       <?php 
 
       if ($auth->isLoggedIn()) {
-        echo "<h3 class=\"h3 text-center mb-5\">$uruser - ID: $uid - Dashboard</h3>";
+        echo "<h3 class=\"h3 text-center mb-5\">$uruser - ID: $uid - Stream</h3>";
 
-        $results = DB::queryRaw("SELECT * FROM $urtable WHERE id=%s", $urtask);
+        $results = DB::queryRaw("SELECT * FROM urbase_streams WHERE userid=%s", $uid);
         $row = $results->fetch_assoc();
 
-        if (!$uid == $row['userid']) { 
-          echo "Invalid.";
-        } else {
-?>
-          <div class="card text-center">
-          <div class="card-header">
-            Task ID: <?php echo $row['id']; ?>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"><?php echo $row['requestsubject']; ?></h5>
-            <p class="card-text"><?php echo $row['requestbody']; ?><hr />
-            <?php echo $row['requestdetails']; ?></p>
-          </div>
-          <div class="card-footer text-muted">
-            <?php echo $row['requestdate']; ?>
-          </div>
+        //echo $row["info_title"];
+        ?>
+
+        <div class="card text-center">
+        <div class="card-header"><?php echo $row["info_name"]; ?></div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">
+            With supporting text below as a natural lead-in to additional content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
-<?php 
+        <div class="card-footer text-muted">2 days ago</div>
+      </div>
+<?php
 
-        }
 
-        // user is not logged in
-      } else {
+    } else {
         echo "You're not logged in. <a href=\"login/\">Login here</a>.";
       } ?>
 
