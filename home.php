@@ -31,7 +31,7 @@
               </div>
               <div class="col-10">
                 <h5 class="feature-title">Code share</h5>
-                <p class="grey-text">We don't lock you out of your project. You're in complete control of the source regardless where it's hosted.</p>
+                <p class="black-text">We don't lock you out of your project. You're in complete control of the source regardless where it's hosted.</p>
               </div>
             </div>
             <!--/First row-->
@@ -45,7 +45,7 @@
               </div>
               <div class="col-10">
                 <h5 class="feature-title">Detailed documentation</h5>
-                <p class="grey-text">No trickery. Notes to help you if you don't want our help after project completion.
+                <p class="black-text">No trickery. Notes to help you if you don't want our help after project completion.
                 </p>
               </div>
             </div>
@@ -60,7 +60,7 @@
               </div>
               <div class="col-10">
                 <h5 class="feature-title">Cadence and Courage</h5>
-                <p class="grey-text">Our support plans offer sure confidence to continue on your own.</p>
+                <p class="black-text">Our support plans offer sure confidence to continue on your own.</p>
               </div>
             </div>
             <!--/Third row-->
