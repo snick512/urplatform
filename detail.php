@@ -17,11 +17,6 @@ require_once 'login/db.php';
 
 
 if ($auth->isLoggedIn()) {
-// $_SESSION['username']
-// logged in
-//echo "We're logged in as ".$_SESSION['username']."";
-
-//include "home.php";
 
 include "task.php";
 
